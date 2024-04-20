@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01 - Verificador de Idade</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div class="form">
+            <label for="ano">Ano de Nascimento</label>
+            <input type="number" name="ano" id="ano">
+            <button onclick="verificar()">Verificar</button>
+        </div>
+        <div class="input-sexo">
+            <label for="sexo">Sexo</label>
+            <input type="radio" name="sexo" id="masc" value="Homem">
+            <label for="masc">Homem</label>
+            <input type="radio" name="sexo" id="fem" value="Mulher">
+            <label for="fem">Mulher</label>
+        </div>
+    </section>
+    <section>
+        <div class="resultado">
+            <p>Gênero: <span id="genero"></span>, com <span id="idade"></span> anos de idade</p>
+            <img src="" alt="" id="imagem">
+        </div>
+    </section>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
