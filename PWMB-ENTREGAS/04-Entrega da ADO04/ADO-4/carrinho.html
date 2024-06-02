@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="carrinho-container">
+        <h1>Carrinho de Compras</h1>
+        <div id="produtos-carrinho"></div>
+        <table id="carrinho-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id do Produto</th>
+                    <th>Nome do Produto</th>
+                    <th>Valor Unitário</th>
+                    <th>Quantidade</th>
+                    <th>Valor Total</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody id="carrinho-body"></tbody>
+        </table>
+        <button onclick="finalizarCompra()">Encerrar Compra</button>
+        <button onclick="voltarParaVitrine()">Voltar para Vitrine</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

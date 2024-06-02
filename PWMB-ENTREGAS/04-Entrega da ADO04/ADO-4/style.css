@@ -1,0 +1,179 @@
+/* Estilos globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos do corpo da página */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(50deg, #00dbde 0%, #fc00ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs de login */
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #27643c;
+    border-radius: 5px;
+}
+
+/* Botão de login */
+button {
+    background-color: #27643c;
+    border: 2px solid #27643c;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f5230;
+}
+
+/* Estilos da vitrine */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cliente-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produto {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+/* Estilos do Carrinho de Compras */
+#carrinho-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#carrinho-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#produtos-carrinho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.produto-carrinho {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.produto-carrinho img {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
+#carrinho-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#carrinho-table th,
+#carrinho-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#carrinho-table th {
+    background-color: #f2f2f2;
+}
+
+#carrinho-table th:first-child,
+#carrinho-table td:first-child {
+    border-left: none;
+}
+
+#carrinho-table th:last-child,
+#carrinho-table td:last-child {
+    border-right: none;
+}
+
+#carrinho-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#carrinho-table tbody td {
+    vertical-align: middle;
+}
+
+#carrinho-table tfoot td {
+    text-align: right;
+}
+
+#carrinho-table tfoot td:first-child {
+    font-weight: bold;
+}
+
+#carrinho-container button {
+    background-color: #27643c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#carrinho-container button:hover {
+    background-color: #1f5230;
+}
+
+#carrinho-container button + button {
+    margin-left: 10px;
+}
