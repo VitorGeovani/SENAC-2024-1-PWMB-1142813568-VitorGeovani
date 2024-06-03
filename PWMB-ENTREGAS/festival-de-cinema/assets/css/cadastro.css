@@ -1,0 +1,27 @@
+/* Estilos específicos para as páginas de login e cadastro */
+
+/* Estilo para ajustar a margem superior do conteúdo */
+.mt-5 {
+    margin-top: 80px;
+}
+
+/* Estilo para ajustar a margem inferior do conteúdo */
+.mb-4 {
+    margin-top: 100px;
+}
+
+/* Estilo para centralizar o formulário */
+.form-label, .form-control, .btn {
+    text-align: left;
+}
+
+/* Estilo para ajustar a largura dos campos do formulário */
+.form-control {
+    width: 100%;
+}
+
+.faca-login-aqui:hover {
+    color: #007bff;
+    text-decoration: none;
+    transition: 0.5s;
+}

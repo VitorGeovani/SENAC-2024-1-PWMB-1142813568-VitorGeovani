@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-mysql-crud",
+  "version": "1.0.0",
+  "description": "Node.js MySQL CRUD Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql",
+    "crud"
+  ],
+  "author": "bezkoder",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "canvas": "^2.11.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mailer": "^0.6.7",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.3",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7",
+    "puppeteer": "^22.7.1",
+    "qrcode": "^1.5.3"
+  }
+}

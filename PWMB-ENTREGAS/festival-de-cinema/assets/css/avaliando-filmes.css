@@ -1,0 +1,39 @@
+/* Estilos para a página de inserção de filmes */
+
+/* Alinhar o formulário ao centro da página */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Espaçamento entre os elementos do formulário */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Estilo para o botão de enviar */
+.btn-primary {
+    width: 100%;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .text-center{
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submeter Filmes - Cinemado</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-cinemado-administracao.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
+    <link rel="stylesheet" href="assets/css/submeter-filmes.css">
+</head>
+
+<body>
+    <!-- Navbar do painel de administração -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white admin-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="painel-administracao.html"><img src="./assets/img/logo-cinemado.png" alt="Logo do Site" style="width: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Links para as funcionalidades do painel de administração -->
+                    <li class="nav-item"><a class="nav-link" href="painel-administracao.html">Painel</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submetendo.html">Submeter Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="avaliando.html">Avaliar Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programando.html">Programação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingressando.html">Ingressos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventando.html">Eventos Paralelos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Submeter Filmes</h1>
+        <!-- Formulário de submissão de filmes -->
+        <div class="col-md-6 offset-md-3">
+            <form id="form-submissao-filmes" enctype="multipart/form-data" action="http://localhost:3000/filmes/" method="POST">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">Capa do Filme</label>
+                    <input type="file" class="form-control" id="capa" name="capa" value="" accept="image/*" required>
+                </div>
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título do Filme</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="diretor" class="form-label">Diretor</label>
+                    <input type="text" class="form-control" id="diretor" name="diretor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Gênero</label>
+                    <input type="text" class="form-control" id="genero" name="genero" required>
+                </div>
+                <div class="mb-3">
+                    <label for="duracao" class="form-label">Duração (minutos)</label>
+                    <input type="number" class="form-control" id="duracao" name="duracao" required>
+                </div>
+                <div class="mb-3">
+                    <label for="data_lancamento" class="form-label">Data de Lançamento</label>
+                    <input type="date" class="form-control" id="data_lancamento" name="data_lancamento" required>
+                </div>
+                <div class="mb-3">
+                    <label for="sinopse" class="form-label">Sinopse</label>
+                    <textarea class="form-control" id="sinopse" name="sinopse" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="classificacao" class="form-label">Classificação Indicativa</label>
+                    <input type="text" class="form-control" id="classificacao" name="classificacao" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submeter Filme</button>
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Scripts -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <!-- <script src="/assets/js/submetendo.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* Estilos gerais */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    color: #343a40;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.page-footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.page-footer .links a {
+    color: #fff;
+}
+
+.links {
+    text-decoration: none;
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px 0;
+    background-color: #343a40;
+}
+
+.card {
+    margin-top: 100px;
+}
+
+/* Estilos específicos para a página de login */
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 700;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.cadastro-aqui:hover {
+    color: #007bff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.logotipo {
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Estilos específicos para a página index.html */
+
+.clean-hero .text {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.clean-hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.clean-hero p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.clean-info {
+    padding: 20px 0; /* Reduzindo o espaçamento vertical */
+}
+
+.clean-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.clean-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.text {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.git{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+
+
+
+/* Estilos responsivos */
+
+@media (max-width: 768px) {
+    .clean-hero .text {
+        padding: 60px 0;
+    }
+
+    .clean-hero h2 {
+        font-size: 28px;
+    }
+
+    .clean-hero p {
+        font-size: 16px;
+    }
+
+    .clean-info {
+        padding: 20px 0;
+    }
+
+    .clean-info h2 {
+        font-size: 20px;
+    }
+
+    .clean-info p {
+        font-size: 14px;
+    }
+}

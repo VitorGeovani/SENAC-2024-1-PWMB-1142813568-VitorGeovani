@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Filme - Cinemado</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-cinemado-administracao.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/avaliando-filmes.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="painel-administracao.html"><img src="./assets/img/logo-cinemado.png" alt="Logo do Site" style="width: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <!-- Links para as funcionalidades do painel de administração -->
+                    <li class="nav-item"><a class="nav-link" href="painel-administracao.html">Painel</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submetendo.html">Submeter Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="avaliando.html">Avaliar Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programando.html">Programação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingressando.html">Ingressos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventando.html">Eventos Paralelos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Avaliando Filme</h1>
+        <form id="formulario-filme" enctype="multipart/form-data" action="http://localhost:3000/filmes-avaliados/" method="POST">
+            <div class="mb-3">
+                <label for="capa" class="form-label">Capa do Filme</label>
+                <input type="file" class="form-control" id="capa" name="capa" value="" accept="image/*" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título do Filme</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+            <div class="mb-3">
+                <label for="diretor" class="form-label">Diretor</label>
+                <input type="text" class="form-control" id="diretor" name="diretor" required>
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="form-label">Gênero</label>
+                <input type="text" class="form-control" id="genero" name="genero" required>
+            </div>
+            <div class="mb-3">
+                <label for="duracao" class="form-label">Duração (minutos)</label>
+                <input type="number" class="form-control" id="duracao" name="duracao" required>
+            </div>
+            <div class="mb-3">
+                <label for="data-lancamento" class="form-label">Data de Lançamento</label>
+                <input type="date" class="form-control" id="data-lancamento" name="data_lancamento" required>
+            </div>
+            <div class="mb-3">
+                <label for="classificacao-indicativa" class="form-label">Classificação Indicativa</label>
+                <input type="text" class="form-control" id="classificacao-indicativa" name="classificacao_indicativa" required>
+            </div>
+            <div class="mb-3">
+                <label for="cinematografia" class="form-label">Cinematografia</label>
+                <input type="text" class="form-control" id="cinematografia" name="cinematografia" required>
+            </div>
+            <div class="mb-3">
+                <label for="originalidade" class="form-label">Originalidade</label>
+                <input type="text" class="form-control" id="originalidade" name="originalidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="comentario-tecnico" class="form-label">Comentário Técnico</label>
+                <textarea class="form-control" id="comentario-tecnico" name="comentario_tecnico" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer dark">
+        <!-- Adicione o conteúdo do footer conforme necessário -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

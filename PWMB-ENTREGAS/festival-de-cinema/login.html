@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemado - Login</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-cinemado-administracao.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <img class="logotipo" src="./assets/img/logo-cinemado-administracao.png" alt="Logo do Site" style="width: 200px;">
+                <div class="card">
+                    <div class="card-header">Cinemado - Login</div>
+                    <div class="card-body">
+                        <!-- Adicionando o span para exibir a mensagem de erro -->
+                        <span id="error-message" class="error-message"></span>
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Seu email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Sua senha">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="lembrar">
+                                <label class="form-check-label" for="lembrar">Lembrar-me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            <div class="col-12 text-center">
+                                <!-- Link para a página de cadastro -->
+                                <a href="cadastro.html" class="cadastro-aqui">Não tem cadastro? Cadastre-se aqui</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/login.js"></script> -->
+    <script>
+        // Manipulador de evento para o envio do formulário de login
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+
+            // Obtenha os valores de email e senha do formulário
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Pegar os dados do formulário e enviar para o servidor
+            fetch('http://localhost:3000/usuarios/', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(function(response) {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Erro ao realizar o login!');
+                }
+            }).then(function(usuarios) {
+                const usuario = usuarios.find(function(usuario) {
+                    return usuario.email === email && usuario.senha === senha;
+                });
+
+                if (usuario) {
+                    alert('Login realizado com sucesso!');
+                    window.location.href = 'painel-administracao.html';
+                } else {
+                    // Exibindo a mensagem de erro no span
+                    document.getElementById('error-message').textContent = 'Email ou senha incorretos!';
+                }
+            }).catch(function(error) {
+                // Exibindo a mensagem de erro no span
+                document.getElementById('error-message').textContent = error.message;
+            });
+        });
+    </script>
+    
+</body>
+</html>

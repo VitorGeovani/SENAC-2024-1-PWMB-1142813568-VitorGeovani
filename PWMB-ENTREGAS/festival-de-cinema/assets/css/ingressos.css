@@ -1,0 +1,193 @@
+/* Estilos específicos para a página de venda de ingressos e reservas */
+
+/* Estilo para ajustar a margem superior do conteúdo */
+.mt-5 {
+    margin-top: 80px;
+}
+
+/* Estilo para ajustar a margem inferior do conteúdo */
+.mb-4 {
+    margin-top: 0px;
+}
+
+.text-center {
+    margin-top: 100px;
+}
+
+/* Estilo para ajustar a largura do card de venda de ingresso e reserva */
+.card {
+    width: 100%;
+}
+
+/* Estilo para ajustar a altura da imagem do card de venda de ingresso e reserva */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Estilo para ajustar a cor do título do card de venda de ingresso e reserva */
+.card-title {
+    color: #007bff;
+}
+
+/* Estilo para ajustar o tamanho do texto do card de venda de ingresso e reserva */
+.card-text {
+    font-size: 14px;
+}
+
+/* Estilo para ajustar a cor do botão de comprar ingresso */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilo para alterar a cor do botão de comprar ingresso quando em foco */
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para o modal */
+.modal-content {
+    background-color: #fff;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    color: #333;
+}
+
+.modal-body {
+    color: #555;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Estilo para o botão de adicionar ao carrinho dentro do modal */
+#adicionarAoCarrinhoBtn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#adicionarAoCarrinhoBtn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo para o carrinho de compras */
+#carrinho {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+#carrinho h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#carrinho ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#carrinho ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+#carrinho ul li:last-child {
+    border-bottom: none;
+}
+
+#carrinho ul li::before {
+    content: "\2022";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Estilo para o botão de fechar o carrinho */
+#fecharCarrinhoBtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#fecharCarrinhoBtn:hover {
+    color: #007bff;
+}
+
+
+
+@media (max-width: 768px) {
+    /* Estilo para ajustar a altura da imagem do card de filme */
+    .card-img-top {
+        height: 200px;
+    }
+
+    /* Estilo para ajustar o tamanho do texto do card de filme */
+    .card-text {
+        font-size: 12px;
+    }
+
+    /* Estilo para ajustar a margem inferior do card de filme */
+    .mb-4 .card {
+        margin-bottom: 0;
+    }
+
+    /* Estilo para ajustar a largura do card de filme */
+    .card {
+        width: 100%;
+    }
+
+    /* Estilo para ajustar a margem inferior do conteúdo */
+    .mb-4 {
+        margin-top: 0px;
+    }
+
+    .text-center {
+        margin-top: 60px;
+    }
+
+    /* Estilo para ajustar a margem superior do conteúdo */
+    .mt-5 {
+        margin-top: 60px;
+    }
+
+    .navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .text-center{
+        margin-top: 100px;
+    }
+}

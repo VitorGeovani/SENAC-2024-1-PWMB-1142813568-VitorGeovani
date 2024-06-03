@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Cinemado</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-cinemado-administracao.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Cadastro - Cinemado</h1>
+        <!-- Formulário de cadastro -->
+        <form id="form-cadastro" action="http://localhost:3000/usuarios/" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu email">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Sua senha">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <div class="col-12 text-center">
+                <!-- Link para a página de login -->
+                <a href="login.html" class="faca-login-aqui">Já tem cadastro? Faça login aqui</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script>
+        // Manipulador de evento para o envio do formulário de cadastro
+        document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+
+            // Obtenha os valores de email e senha do formulário
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Enviar os dados do formulário para o servidor
+            fetch('http://localhost:3000/usuarios/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    senha: senha
+                })
+            }).then(function(response) {
+                if (response.ok) {
+                    alert('Cadastro realizado com sucesso!');
+                    window.location.href = 'login.html';
+                } else {
+                    alert('Erro ao realizar o cadastro!');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

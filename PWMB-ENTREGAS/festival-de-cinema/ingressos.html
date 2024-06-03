@@ -1,0 +1,99 @@
+<!-- ingressos.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Ingressos e Reservas - Cinemado</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-cinemado.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/ingressos.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html"><img src="./assets/img/logo-cinemado.png" alt="Logo do Site" style="width: 100px;"></a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/submissao.html">Filmes Submetidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/avaliacao.html">Filmes Avaliados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/programacao.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ingressos.html">Venda de Ingressos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/eventos.html">Eventos Paralelos</a></li>
+                    <!-- Adicione os outros links da navbar conforme necessário -->
+                </ul>
+                <!-- Ícone do Carrinho -->
+                <div id="carrinho-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge bg-primary">0</span> <!-- Mostrar a quantidade de itens no carrinho -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Compre seu ingresso já!</h1>
+        <div class="row" id="ingresso-lista">
+            <!-- Aqui serão adicionados os cards de venda de ingresso e reserva -->
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carrinhoModalLabel">Carrinho de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div id="detalhes-filme">
+            
+                    </div> <!-- Esta div conterá os detalhes do filme -->
+                </div>
+                <div class="modal-body">
+                    <div id="carrinho-items">
+                        <!-- Aqui serão listados os itens do carrinho -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="limparCarrinhoBtn">Limpar Carrinho</button>
+                    <button type="button" class="btn btn-success" id="finalizarCompraBtn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal -->
+
+    <!-- Carrinho de Compras -->
+    <div id="carrinho" class="bg-light p-3 rounded">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Carrinho</h3>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer dark">
+        <!-- Adicione o conteúdo do footer conforme necessário -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/ingressos.js"></script>
+    <script src="assets/js/emailService.js"></script>
+    <script src="assets/js/finalizarCompra.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

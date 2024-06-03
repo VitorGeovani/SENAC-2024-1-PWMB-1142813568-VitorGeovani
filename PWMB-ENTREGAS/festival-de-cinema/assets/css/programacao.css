@@ -1,0 +1,91 @@
+/* Estilos específicos para a página de programação e exibições */
+
+/* Estilo para ajustar a margem superior do conteúdo */
+.mt-5 {
+    margin-top: 80px;
+}
+
+/* Estilo para ajustar a margem inferior do conteúdo */
+.mb-4 {
+    margin-top: 0px;
+}
+
+.text-center {
+    margin-top: 100px;
+}
+
+/* Estilo para ajustar a margem inferior do card de programação e exibições */
+.mb-4 .card {
+    margin-bottom: 0;
+}
+
+/* Estilo para ajustar a largura do card de programação e exibições */
+.card {
+    width: 100%;
+}
+
+/* Estilo para ajustar a altura da imagem do card de programação e exibições */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Estilo para ajustar a cor do título do card de programação e exibições */
+.card-title {
+    color: #007bff;
+}
+
+/* Estilo para ajustar o tamanho do texto do card de programação e exibições */
+.card-text {
+    font-size: 14px;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    /* Estilo para ajustar a altura da imagem do card de filme */
+    .card-img-top {
+        height: 200px;
+    }
+
+    /* Estilo para ajustar o tamanho do texto do card de filme */
+    .card-text {
+        font-size: 12px;
+    }
+
+    /* Estilo para ajustar a margem inferior do card de filme */
+    .mb-4 .card {
+        margin-bottom: 0;
+    }
+
+    /* Estilo para ajustar a largura do card de filme */
+    .card {
+        width: 100%;
+    }
+
+    /* Estilo para ajustar a margem inferior do conteúdo */
+    .mb-4 {
+        margin-top: 0px;
+    }
+
+    .text-center {
+        margin-top: 60px;
+    }
+
+    /* Estilo para ajustar a margem superior do conteúdo */
+    .mt-5 {
+        margin-top: 60px;
+    }
+
+    .navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .text-center{
+        margin-top: 100px;
+    }
+}
